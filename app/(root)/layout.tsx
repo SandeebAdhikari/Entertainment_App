@@ -1,7 +1,12 @@
-import React from "react";
+
+import React from 'react'
 
 const layout = () => {
-  return <div></div>;
-};
+  return (
+    <div>
+      
+    </div>
+  )
+}
 
-export default layout;
+export default layout
