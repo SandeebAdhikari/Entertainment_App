@@ -32,15 +32,15 @@ const SignIn: React.FC<SignInProps> = ({ onChange, onSubmit, formData }) => {
           value={formData.password}
           onChange={onChange}
           required
-          className="w-[336px] h-[37px] mt-6  p-2  border-b border-[#5A698F] bg-[#161D2F] text-white outline-none focus:ring-0 hover:border-b-white hover:cursor-pointer"
+          className="w-[336px] h-[37px] mt-6  p-2  border-b border-[#5A698F] bg-[#161D2F] font-light  text-white outline-none focus:ring-0 hover:border-b-white hover:cursor-pointer"
         />
         <button
           type="submit"
           className="mt-10 bg-[#FC4747] text-white p-2 w-[336px] h-[48px] rounded hover:bg-white hover:text-black"
         >
-          <span className="text-[15px]">Login to your account</span>
+          <span className="text-[15px] font-light ">Login to your account</span>
         </button>
-        <p className="mt-6 mb-8 text-center text-[15px] text-white">
+        <p className="mt-6 mb-8 font-light text-center text-[15px] text-white">
           Don't have an account?{" "}
           <span className="text-[#FC4747] hover:cursor-pointer">Sign Up</span>
         </p>

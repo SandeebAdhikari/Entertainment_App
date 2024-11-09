@@ -1,3 +1,4 @@
+import SearchBar from "@/components/SearchBar";
 import SideBar from "@/components/SideBar";
 
 export default function RootLayout({
@@ -8,7 +9,10 @@ export default function RootLayout({
   return (
     <main className="flex w-full">
       <SideBar />
-      {children}
+      <div className="flex flex-col w-full">
+        <SearchBar />
+        {children}
+      </div>
     </main>
   );
 }
