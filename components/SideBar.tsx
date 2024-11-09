@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const SideBar = () => {
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleNavigation = (path: string) => {
     router.push(path);
@@ -14,35 +15,45 @@ const SideBar = () => {
       <div className="mt-[36px]">
         <img src="/assets/logo.svg" alt="logo" className="w-8 h-[25.6px]" />
       </div>
-      <div className="mt-[76px] w-[20px] h-[200px]">
+
+      <div className="mt-[76px] w-[20px] h-[200px] flex flex-col items-center">
         <img
           src="/assets/icon-nav-home.svg"
           alt="home logo"
-          className="mt-10 w-5 h-5 hover:invert hover:cursor-pointer"
+          className={`mt-10 w-5 h-5 hover:invert hover:cursor-pointer ${
+            pathname === "/home" ? "invert" : ""
+          }`}
           onClick={() => handleNavigation("/home")}
         />
 
         <img
           src="/assets/icon-nav-movies.svg"
           alt="movies logo"
-          className="mt-10 w-5 h-5 hover:invert hover:cursor-pointer"
+          className={`mt-10 w-5 h-5 hover:invert hover:cursor-pointer ${
+            pathname === "/movies" ? "invert" : ""
+          }`}
           onClick={() => handleNavigation("/movies")}
         />
 
         <img
           src="/assets/icon-nav-tv-series.svg"
           alt="tv-series logo"
-          className="mt-10 w-5 h-5 hover:invert hover:cursor-pointer"
+          className={`mt-10 w-5 h-5 hover:invert hover:cursor-pointer ${
+            pathname === "/tv_series" ? "invert" : ""
+          }`}
           onClick={() => handleNavigation("/tv_series")}
         />
 
         <img
           src="/assets/icon-nav-bookmark.svg"
           alt="bookmark logo"
-          className="mt-10 w-5 h-5 hover:invert hover:cursor-pointer"
+          className={`mt-10 w-5 h-5 hover:invert hover:cursor-pointer ${
+            pathname === "/bookmarked" ? "invert" : ""
+          }`}
           onClick={() => handleNavigation("/bookmarked")}
         />
       </div>
+
       <div className="mt-[552px]">
         <img
           src="/assets/image-avatar.png"
