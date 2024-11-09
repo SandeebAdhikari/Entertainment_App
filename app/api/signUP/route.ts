@@ -5,14 +5,13 @@ import type { NextRequest } from "next/server";
 
 export async function POST(req: NextRequest) {
   try {
-    console.log("API called"); // Add logging here
+    console.log("API called");
 
-    const { name, email, password } = await req.json();
-    console.log("Received data:", { name, email, password });
+    const { name, username, email, password } = await req.json();
+    console.log("Received data:", { name, username, email, password });
 
     await connectToDatabase();
 
-    // Check if the user already exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       console.log("User already exists");
@@ -22,8 +21,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Create a new user
-    const newUser = new User({ name, email, password });
+    const newUser = new User({ name, username, email, password });
     await newUser.save();
 
     console.log("User registered successfully");

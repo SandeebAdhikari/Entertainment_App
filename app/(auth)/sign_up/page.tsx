@@ -1,10 +1,14 @@
 "use client";
 
+import SignUp from "@/components/SignUp";
 import { useState, ChangeEvent, FormEvent } from "react";
+import { useRouter } from "next/navigation";
 
-const SignUp = () => {
+const sign_up = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
+    username: "",
     email: "",
     password: "",
   });
@@ -27,7 +31,12 @@ const SignUp = () => {
 
       if (res.ok) {
         setMessage(data.message);
-        setFormData({ name: "", email: "", password: "" });
+
+        setTimeout(() => {
+          router.push("/sign_in");
+        }, 1500);
+
+        setFormData({ name: "", username: "", email: "", password: "" });
       } else {
         setMessage(data.error);
       }
@@ -38,42 +47,12 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-4 p-6 bg-gray-100 shadow-md rounded"
-      >
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded">
-          Sign Up
-        </button>
-        {message && <p>{message}</p>}
-      </form>
-    </div>
+    <SignUp
+      onChange={handleChange}
+      onSubmit={handleSubmit}
+      formData={formData}
+    />
   );
 };
 
-export default SignUp;
+export default sign_up;
