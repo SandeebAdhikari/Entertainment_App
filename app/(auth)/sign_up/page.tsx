@@ -48,7 +48,7 @@ const sign_up = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex items-center justify-center w-full">
+      <div className="mb-[82.99px] flex items-center justify-center w-full">
         <img
           src="/assets/logo.svg"
           alt="logo"
