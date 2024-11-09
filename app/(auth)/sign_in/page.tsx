@@ -42,11 +42,20 @@ const sign_in = () => {
     }
   };
   return (
-    <SignIn
-      onChange={handleChange}
-      onSubmit={handleSubmit}
-      formData={formData}
-    />
+    <div className="flex flex-col">
+      <div className="mb-[82.99px] flex items-center justify-center w-full">
+        <img
+          src="/assets/logo.svg"
+          alt="logo"
+          className="w-[32px] h-[25.6px]"
+        />
+      </div>
+      <SignIn
+        onChange={handleChange}
+        onSubmit={handleSubmit}
+        formData={formData}
+      />
+    </div>
   );
 };
 
