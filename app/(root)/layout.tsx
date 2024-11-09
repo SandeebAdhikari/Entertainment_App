@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <main className="flex w-full">
       <SideBar />
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col mx-9 w-full">
         <SearchBar />
         {children}
       </div>

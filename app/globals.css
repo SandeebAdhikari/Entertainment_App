@@ -6,6 +6,15 @@ body {
   background-color: #10141e;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Hide scrollbar on Chrome, Safari, Edge */
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Hide scrollbar on IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar on Firefox */
+}
+
 .glassmorphism {
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px);

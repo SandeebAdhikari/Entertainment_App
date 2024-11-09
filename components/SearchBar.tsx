@@ -21,17 +21,16 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex mt-16 mx-9 gap-6 items-center justify-center h-8 ">
-      <div className="flex gap-6"></div>
+    <div className="flex mt-16 gap-6 items-center justify-center h-8 ">
       <img
         src="/assets/icon-search.svg"
         alt="search icon"
-        className="w-8 h-8 ml-4 mt-2"
+        className="w-8 h-8"
       />
       <input
         type="text"
         placeholder={getPlaceholder()}
-        className="w-full py-4  bg-[#10141E] font-light text-[24px] text-white outline-none focus:ring-0 hover:border-b hover:border-[#5A698F] hover:cursor-pointer"
+        className="w-full py-4 bg-[#10141E] font-light text-[24px] text-white outline-none focus:ring-0 hover:border-b hover:border-[#5A698F] hover:cursor-pointer"
       />
     </div>
   );
