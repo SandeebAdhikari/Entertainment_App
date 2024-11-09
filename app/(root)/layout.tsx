@@ -1,12 +1,14 @@
+import SideBar from "@/components/SideBar";
 
-import React from 'react'
-
-const layout = () => {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div>
-      
-    </div>
-  )
+    <main className="flex w-full">
+      <SideBar />
+      {children}
+    </main>
+  );
 }
-
-export default layout

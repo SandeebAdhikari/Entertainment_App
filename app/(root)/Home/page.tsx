@@ -1,11 +1,8 @@
 import React from "react";
+import SideBar from "@/components/SideBar";
 
-const page = () => {
-  return (
-    <div>
-      <h1 className="text-4xl text-white">Home</h1>
-    </div>
-  );
+const home = () => {
+  return <div></div>;
 };
 
-export default page;
+export default home;
