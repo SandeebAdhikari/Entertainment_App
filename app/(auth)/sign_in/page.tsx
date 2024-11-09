@@ -30,7 +30,7 @@ const sign_in = () => {
       if (res.ok) {
         setMessage("Login successful!");
         setTimeout(() => {
-          router.push("/");
+          router.push("/home");
         }, 1500);
         setFormData({ username: "", password: "" });
       } else {
