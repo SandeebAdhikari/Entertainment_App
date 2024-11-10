@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 interface FormData {
   name: string;
@@ -54,7 +55,9 @@ const SignUp: React.FC<SignUpProps> = ({ onChange, onSubmit, formData }) => {
         </button>
         <p className="mt-6 mb-8 text-center text-[15px] text-white">
           Already have an account?{"  "}
-          <span className="text-[#FC4747] hover:cursor-pointer">Login</span>
+          <Link href="/sign_in" className="text-[#FC4747] hover:cursor-pointer">
+            Login
+          </Link>
         </p>
       </form>
     </div>

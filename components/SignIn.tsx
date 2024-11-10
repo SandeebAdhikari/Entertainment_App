@@ -43,7 +43,7 @@ const SignIn: React.FC<SignInProps> = ({ onChange, onSubmit, formData }) => {
         </button>
         <p className="mt-6 mb-8 font-light text-center text-[15px] text-white">
           Don't have an account?{" "}
-          <Link href="/signUP" className="text-[#FC4747] hover:cursor-pointer">
+          <Link href="/sign_up" className="text-[#FC4747] hover:cursor-pointer">
             Sign Up
           </Link>
         </p>
