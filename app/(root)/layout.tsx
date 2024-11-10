@@ -2,7 +2,7 @@
 import SearchBar from "@/components/SearchBar";
 import SideBar from "@/components/SideBar";
 
-export default function HomeLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ export default function HomeLayout({
   return (
     <main className="flex w-full">
       <SideBar />
-      <div className="flex flex-col flex-grow mx-9">
+      <div className="flex flex-col mx-9 w-full">
         <SearchBar />
         {children}
       </div>
