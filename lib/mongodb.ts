@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 console.log("Loaded MONGODB_URI:", process.env.MONGODB_URI);
 
-const MONGODB_URI = process.env.MONGODB_URI as string;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
   throw new Error(
