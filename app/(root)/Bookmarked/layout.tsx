@@ -2,7 +2,7 @@
 import SearchBar from "@/components/SearchBar";
 import SideBar from "@/components/SideBar";
 
-export default function RootLayout({
+export default function BookMarkLayout({
   children,
 }: {
   children: React.ReactNode;
