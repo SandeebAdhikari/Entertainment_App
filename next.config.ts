@@ -8,9 +8,7 @@ const nextConfig: NextConfig = {
       permanent: true,
     },
   ],
-  experimental: {
-    appDir: true,
-  },
+  experimental: {},
 };
 
 export default nextConfig;
