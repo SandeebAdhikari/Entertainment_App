@@ -8,7 +8,6 @@ const nextConfig: NextConfig = {
       permanent: true,
     },
   ],
-  experimental: {},
 };
 
 export default nextConfig;
