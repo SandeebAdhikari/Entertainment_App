@@ -1,14 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/sign_in",
-        permanent: true,
-      },
-    ];
+  redirects: async () => [
+    {
+      source: "/",
+      destination: "/sign_in",
+      permanent: true,
+    },
+  ],
+  env: {
+    MONGODB_URI: process.env.MONGODB_URI,
   },
 };
 
