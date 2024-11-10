@@ -4,10 +4,8 @@ console.log("Loaded MONGODB_URI:", process.env.MONGODB_URI);
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
-if (!MONGODB_URI) {
-  throw new Error(
-    "Please define the MONGODB_URI environment variable inside .env.local"
-  );
+if (!MONGODB_URI || MONGODB_URI === "") {
+  throw new Error("Please define the MONGODB_URI environment variable");
 }
 
 interface MongooseGlobal extends globalThis.Global {
